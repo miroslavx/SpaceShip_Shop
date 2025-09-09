@@ -1,0 +1,11 @@
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\bin\Debug\net9.0\shoptar.Core.deps.json
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\bin\Debug\net9.0\shoptar.Core.dll
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\bin\Debug\net9.0\shoptar.Core.pdb
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\shoptar.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\shoptar.Core.AssemblyInfoInputs.cache
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\shoptar.Core.AssemblyInfo.cs
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\shoptar.Core.csproj.CoreCompileInputs.cache
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\shoptar.Core.dll
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\refint\shoptar.Core.dll
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\shoptar.Core.pdb
+C:\Users\burmi\source\repos\Shop-master\shoptar.Core\obj\Debug\net9.0\ref\shoptar.Core.dll
