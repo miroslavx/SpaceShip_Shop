@@ -1,0 +1,39 @@
+﻿@model IEnumerable<shoptar.Models.Spaceships.SpaceshipsIndexViewModel>
+
+@{
+    int rowNumber = 1;
+    ViewData["Title"] = "Spaceships";
+}
+
+<div class="h1">
+    @ViewData["Title"]
+</div>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Spaceship</a>
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td scope="col">Nr</td>
+            <td scope="col">Name</td>
+            <td scope="col">Type</td>
+            <td scope="col">Build Date</td>
+            <td scope="col">Crew</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var spaceships in Model)
+        {
+            <tr>
+                <td>@rowNumber</td>
+                <td>@spaceships.Name</td>
+                <td>@spaceships.TypeName</td>
+                <td>@spaceships.BuiltDate?.ToShortDateString()</td>
+                <td>@spaceships.Crew</td>
+            </tr>
+            rowNumber += 1;
+        }
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@model shoptar.Core.Domain.Spaceship
+
+@{
+    ViewData["Title"] = "Add New Spaceship";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="TypeName" class="control-label">Type</label>
+                <input asp-for="TypeName" class="form-control" />
+                <span asp-validation-for="TypeName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="BuiltDate" class="control-label">Build Date</label>
+                <input asp-for="BuiltDate" type="date" class="form-control" />
+                <span asp-validation-for="BuiltDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Crew" class="control-label"></label>
+                <input asp-for="Crew" type="number" class="form-control" />
+                <span asp-validation-for="Crew" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="EnginePower" class="control-label">Engine Power</label>
+                <input asp-for="EnginePower" type="number" class="form-control" />
+                <span asp-validation-for="EnginePower" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Passengers" class="control-label"></label>
+                <input asp-for="Passengers" type="number" class="form-control" />
+                <span asp-validation-for="Passengers" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="InnerVolume" class="control-label">Inner Volume</label>
+                <input asp-for="InnerVolume" type="number" class="form-control" />
+                <span asp-validation-for="InnerVolume" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
