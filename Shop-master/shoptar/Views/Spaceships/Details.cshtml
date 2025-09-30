@@ -1,0 +1,44 @@
+﻿@model shoptar.Core.Domain.Spaceship
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Spaceship</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+        <dt class="col-sm-3">Type</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.TypeName)</dd>
+
+        <dt class="col-sm-3">Build Date</dt>
+        <dd class="col-sm-9">@Model.BuiltDate?.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">Crew</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Crew)</dd>
+
+        <dt class="col-sm-3">Engine Power</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.EnginePower)</dd>
+
+        <dt class="col-sm-3">Passengers</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Passengers)</dd>
+
+        <dt class="col-sm-3">Inner Volume</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.InnerVolume)</dd>
+
+        <dt class="col-sm-3">Created At</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.CreatedAt)</dd>
+
+        <dt class="col-sm-3">Modified At</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.ModifiedAt)</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Upgrade</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

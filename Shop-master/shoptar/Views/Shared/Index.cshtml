@@ -1,0 +1,43 @@
+﻿@model IEnumerable<shoptar.Models.Kindergartens.KindergartensIndexViewModel>
+
+@{
+    int rowNumber = 1;
+    ViewData["Title"] = "Kindergartens";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Kindergarten</a>
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nr</th>
+            <th>Group Name</th>
+            <th>Children Count</th>
+            <th>Kindergarten Name</th>
+            <th>Teacher Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@rowNumber</td>
+                <td>@Html.DisplayFor(modelItem => item.GroupName)</td>
+                <td>@Html.DisplayFor(modelItem => item.ChildrenCount)</td>
+                <td>@Html.DisplayFor(modelItem => item.KindergartenName)</td>
+                <td>@Html.DisplayFor(modelItem => item.TeacherName)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+            rowNumber++;
+        }
+    </tbody>
+</table>

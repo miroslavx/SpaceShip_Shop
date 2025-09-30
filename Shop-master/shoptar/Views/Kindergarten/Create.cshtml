@@ -1,0 +1,27 @@
+﻿<h1>Add New Kindergarten</h1>
+
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <label>Group Name:</label>
+        <input name="GroupName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Children Count:</label>
+        <input name="ChildrenCount" type="number" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Kindergarten Name:</label>
+        <input name="KindergartenName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Teacher Name:</label>
+        <input name="TeacherName" class="form-control" />
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a href="/Kindergartens" class="btn btn-secondary">Back</a>
+</form>

@@ -5,9 +5,7 @@
     ViewData["Title"] = "Spaceships";
 }
 
-<div class="h1">
-    @ViewData["Title"]
-</div>
+<h1>@ViewData["Title"]</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-primary">Add New Spaceship</a>
@@ -16,24 +14,38 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <td scope="col">Nr</td>
-            <td scope="col">Name</td>
-            <td scope="col">Type</td>
-            <td scope="col">Build Date</td>
-            <td scope="col">Crew</td>
+            <th>Nr</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Build Date</th>
+            <th>Crew</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var spaceships in Model)
+        @foreach (var item in Model)
         {
             <tr>
                 <td>@rowNumber</td>
-                <td>@spaceships.Name</td>
-                <td>@spaceships.TypeName</td>
-                <td>@spaceships.BuiltDate?.ToShortDateString()</td>
-                <td>@spaceships.Crew</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeName)
+                </td>
+                <td>
+                    @item.BuiltDate?.ToShortDateString()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Crew)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Upgrade</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
             </tr>
-            rowNumber += 1;
+            rowNumber++;
         }
     </tbody>
 </table>
